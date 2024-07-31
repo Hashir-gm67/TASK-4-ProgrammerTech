@@ -1,0 +1,558 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1d0505;
+    background-color: #aba6a6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #cb202d;
+    color: white;
+    
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+   
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+header .logo img{
+    display:inline;
+    width: 4vw;
+    height: 8vh;
+    border-radius: 50%;
+
+}
+
+#hero {
+    background-image: url('2.jpg');
+   background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h1 {
+    font-size: 48px;
+    
+}
+
+
+#hero button {
+    padding: 10px 20px;
+    background-color: #ca3e4a;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+#hero button:hover {
+    background-color: #cb202d;
+}
+
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(163, 25, 25, 0.1);
+    transition: transform 0.3s ease;
+    margin: 10PX;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 60%;
+    margin-bottom: 20px;
+  }
+  
+  .card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .card p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    color: #cb202d;
+  }
+  #offers{
+    background-color: #fff;
+    background-image: url(special.jpg);
+    background-size: cover;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  #how-it-works{
+    background-color: #cb202d;
+    color: #fff;
+  }
+#featured, #offers, #how-it-works {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#featured .restaurant, #offers .offer, #how-it-works .step {
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* location box */
+.location-box {
+    padding: 10px;
+    background-color: #060606;
+    border-bottom: 1px solid #e9ecef;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+.location-box input {
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.location-box button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ca3e4a;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.location-box button:hover {
+    background-color: #cb202d;
+}
+
+/* menu */
+
+
+#filters{
+    align-items: center;
+    display: flex;
+    justify-content:space-around;
+    background-color: #fff;
+    font-size: medium;
+    font-weight: bold;
+}
+#filters input{
+ width: 20vw;
+}
+#restaurant-list h2{
+  text-align: center;
+ color: #090909;
+  
+ 
+}
+/* Contact Us Page Styles */
+#contact-info {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+#contact-info p {
+    margin: 10px 0;
+}
+
+#contact-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    background-color: #ca3e4a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+#contact-form button:hover {
+    background-color: #cb202d;
+}
+
+#map {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+/* menu view */
+
+#restaurant-info{
+    background-color: #fff;
+    margin-top: -18px;
+   
+}
+#restaurant-info h2{
+    text-align: center;
+}
+#restaurant-info .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+   
+}
+
+#restaurant-info .details img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#restaurant-info .details .info {
+    max-width: 400px;
+}
+#menu  h2{
+    text-align: center;
+    
+}
+#menu .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+   height: 470px;
+    box-shadow: 0 4px 8px rgba(163, 25, 25, 0.1);
+    transition: transform 0.3s ease;
+    margin: 30px;
+    align-items: normal;
+}
+#menu .card button {
+    padding: 10px;
+    background-color: #cb202d;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#menu .card p{
+    text-align: center;
+}
+
+/* cart */
+
+.cart-items {
+    flex: 2;
+    background-color: white;
+    margin-top: -18px;
+}
+
+.cart-items .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-items .item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-items .item-details {
+    flex: 1;
+}
+
+.cart-items .item-details h3 {
+    margin: 0;
+}
+
+.cart-items .item-details .price {
+    color: #cb202d;
+    font-weight: bold;
+}
+
+.cart-items .item-details .quantity {
+    width: 50px;
+    margin: 10px 0;
+}
+
+.cart-items .remove-item {
+    background-color: #cb202d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-items .remove-item:hover {
+    background-color: #a31a23;
+}
+
+.cart-summary {
+    flex: 1;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+    background-color: white;
+    margin-top: -19px;
+}
+
+.cart-summary h2 {
+    margin-top: 0;
+}
+
+.cart-summary p {
+    font-size: 1.1em;
+}
+
+.checkout-btn {
+    background-color: #cb202d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+}
+
+.checkout-btn:hover {
+    background-color: #a31a23;
+}
+
+/* login  */
+
+.login-section {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    margin-bottom: 10px;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .login-form button {
+    background-color: #cb202d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .login-form button:hover {
+    background-color: #a31a23;
+  }
+  
+  .login-form input[type="text"]:focus,
+  .login-form input[type="password"]:focus {
+    outline: none;
+    border-color: #719ece;
+    box-shadow: 0 0 5px #719ece;}
+
+
+
+    .login-form p {
+        margin-top: 20px;
+    }
+    
+    .login-form a {
+        color: #cb202d;
+        text-decoration: none;
+    }
+    
+    .login-form a:hover {
+        text-decoration: underline;
+    }
+
+/* login and signup */
+
+    .signup-section {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form label {
+    margin-bottom: 10px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.signup-form button {
+    background-color: #cb202d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.signup-form button:hover {
+    background-color: #a31a23;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus {
+    outline: none;
+    border-color: #719ece;
+    box-shadow: 0 0 5px #719ece;
+}
+
+.signup-form p {
+    margin-top: 20px;
+}
+
+.signup-form a {
+    color: #cb202d;
+    text-decoration: none;
+}
+
+.signup-form a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    text-decoration: underline;
+}

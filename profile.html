@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Food Delivery</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">SignUp</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="profile">
+        <h2>User Profile</h2>
+        <div class="profile-info">
+            <h3>Account Information</h3>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" value="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="Email"required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" value="Password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="order-history">
+            <h3>Order History</h3>
+            <div class="order">
+                <h4>Order #123456</h4>
+                <p>Status: Delivered</p>
+                <p>Total: RS1500</p>
+            </div>
+            <!-- Repeat for other orders -->
+        </div>
+        
+        <div class="favorites">
+            <h3>Favorites</h3>
+            <div class="favorite">
+                <h4>Restaurant Name</h4>
+                <p>Italian Cuisine</p>
+            </div>
+            <!-- Repeat for other favorites -->
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Food Delivery. All rights reserved.</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

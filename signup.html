@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="">Food Delivery
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="signup-section">
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm" action="signup.php" method="POST">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+        
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="newusername">Choose a Username</label>
+                <input type="text" id="newusername" name="newusername" required>
+        
+                <label for="newpassword">Choose a Password</label>
+                <input type="password" id="newpassword" name="newpassword" required>
+        
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Food Delivery. All rights reserved.</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Login Form Submission
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation
+            if (username && password) {
+                console.log('Logging in with:', { username, password });
+                // Perform login action, e.g., send to server
+                alert('Login successful!'); 
+               
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    }
+
+    // Signup Form Submission
+    const signupForm = document.getElementById('signupForm');
+    if (signupForm) {
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const newusername = document.getElementById('newusername').value;
+            const newpassword = document.getElementById('newpassword').value;
+
+            // Simple validation
+            if (fullname && email && newusername && newpassword) {
+                console.log('Signing up with:', { fullname, email, newusername, newpassword });
+                
+                alert('Sign Up successful!'); 
+               
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    }
+});
+
+    </script>
+</body>
+</html>

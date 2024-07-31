@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #cb202d;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.cart-items {
+    flex: 2;
+}
+
+.cart-items .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-items .item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-items .item-details {
+    flex: 1;
+}
+
+.cart-items .item-details h3 {
+    margin: 0;
+}
+
+.cart-items .item-details .price {
+    color: #cb202d;
+    font-weight: bold;
+}
+
+.cart-items .item-details .quantity {
+    width: 50px;
+    margin: 10px 0;
+}
+
+.cart-items .remove-item {
+    background-color: #cb202d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-items .remove-item:hover {
+    background-color: #a31a23;
+}
+
+.cart-summary {
+    flex: 1;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+}
+
+.cart-summary h2 {
+    margin-top: 0;
+}
+
+.cart-summary p {
+    font-size: 1.1em;
+}
+
+.checkout-btn {
+    background-color: #cb202d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+}
+
+.checkout-btn:hover {
+    background-color: #a31a23;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Food Delivery</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">SignUp</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="restaurant-info">
+        <h2>Cheezious</h2>
+        <div class="details">
+            <img src="cheezious.jpg" alt="Restaurant Image">
+            <div class="info">
+                <p>Location: I8, Markaz, Islamabad</p>
+                <p>Hours: 10:00 AM - 10:00 PM</p>
+                <p>Contact: (123) 456-7890</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="feature-cards">
+            <div class="card" data-id="1" data-name="Pizza" data-price="499" data-description="Delicious cheese pizza.">
+                <img src="desi.jpg" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>Description: Delicious cheese pizza.</p>
+                <p>Price: Rs 499</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card" data-id="2" data-name="Burger" data-price="499" data-description="Delicious zinger burger.">
+                <img src="desi.jpg" alt="Burger">
+                <h3>Burger</h3>
+                <p>Description: Delicious zinger burger.</p>
+                <p>Price: Rs 499</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card" data-id="3" data-name="Fries" data-price="499" data-description="Delicious Masala Fries.">
+                <img src="desi.jpg" alt="Fries">
+                <h3>Fries</h3>
+                <p>Description: Delicious Masala Fries.</p>
+                <p>Price: Rs 499</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Food Delivery. All rights reserved.</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.parentElement;
+            const item = {
+                id: card.dataset.id,
+                name: card.dataset.name,
+                price: parseFloat(card.dataset.price),
+                description: card.dataset.description,
+                quantity: 1
+            };
+            addItemToCart(item);
+            alert(`${item.name} added to cart!`);
+        });
+    });
+});
+
+function addItemToCart(item) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingItemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
+
+    if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity += 1;
+    } else {
+        cart.push(item);
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+    </script>
+</body>
+</html>
